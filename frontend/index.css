@@ -1,0 +1,329 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* BEGINNING */
+body {
+    background-image: url('assets/Background_Clouds.png');
+    background-size: cover;
+    background-position: center;
+    background-color: #8ac3e8;
+    direction: rtl;
+    font-family: 'Open Sans Hebrew', sans-serif;
+}
+
+/* NAVIGATION */
+.nav {
+    background: #8ac3e8;
+    position: sticky;
+    top: 0;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.nav .logo img {
+    height: 75px; /* Adjust as needed */
+    width: auto;
+}
+.nav .menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+.nav .menu li {
+    position: relative;
+}
+.nav .menu a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block;
+}
+/* Dropdown Styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    top: 100%;
+    left: 0;
+    min-width: 120px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+.dropdown-content a {
+    color: black;
+    padding: 10px;
+    display: block;
+}
+.dropdown-content a:hover {
+    background: #ddd;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    .nav .menu {
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: #333;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+    .nav .menu.active {
+        max-height: 300px; /* Adjust based on content */
+    }
+    .nav .menu li {
+        text-align: center;
+    }
+    .menu.active {
+        padding: 20px;
+    }
+}
+
+/* HERO SECTION */
+.hero {
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+.hero-img {
+    background-image: url('assets/Logo_Motek.png');background-size: cover;
+    background-position: center;
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 1 / 1;
+    margin: auto;
+}
+.hero-content {
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+}
+.hero-header {
+    font-size: 55px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin: 16px;
+    color: #1f366b;
+}   
+.hero-text {   
+    color: black;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+/* GALLERY SECTION */
+.gallery {
+    background-color: transparent;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+}
+.gallery-item {
+    
+}
+.gallery-item img {
+    border-radius: 8%;
+}
+.gallery-item .title {
+    color: #003a6a;
+    text-align: center;
+    font-weight: 900;
+    font-size: 20px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+.gallery-item .sub-title {
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    color: #003a6a;
+    max-width: 200px;
+    max-height: 40px;
+    vertical-align: text-top;
+    line-height: 1.2;
+}
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* INFO SECTION */
+.info {
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+.info-img {
+    background-image: url('assets/Logo_Motek.png');background-size: cover;
+    background-position: center;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
+    margin: auto;
+}
+.info-header {
+    font-size: 55px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    color: #1f366b;
+}   
+.info-text {   
+    color: black;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+.info img {
+    margin-top: 80px;
+    border-radius: 8%;
+}
+
+/* EVENT SECTION */
+
+/* BANNER SECTION */
+.banner {
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+.banner-img {
+    background-image: url('assets/Logo_Motek.png');background-size: cover;
+    background-position: center;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
+    margin: auto;
+}
+.banner-header {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin-bottom: 48px;
+    text-align: center;
+    color: #1f366b;
+}   
+.banner-title {
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    text-align: center;
+    color: #1f366b;
+}
+.banner-list {
+    list-style: inside;
+    list-style-type: disc;
+    margin-bottom: 80px;
+}
+.banner-sublist {
+    list-style: inside;
+    list-style-type: circle;
+    padding-right: 80px;
+}
+.banner-text,
+.banner-subtext {   
+    color: black;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+.banner img {
+    margin-top: 80px;
+    border-radius: 8%;
+}
+
+/* FOOTER SECTION */
+.footer {
+}
+.footer-container {
+    padding: 80px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+
+}
+.footer-header {
+    font-size: 55px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin-bottom: 48px;
+    color: #1f366b;
+}   
+.footer-text,
+.footer-link {
+    color: black;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+.footer-link {
+    text-decoration: underline;
+    cursor: pointer;
+}
